@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,18 +26,20 @@ export default function Hero() {
         aria-label="Main navigation"
       >
         <div className="flex-1">
-          <a
+          {/* <a
             href="/"
             className="flex items-center"
             aria-label="Crewpreneurs Home"
-          >
-            <Image
-              src="/logo.png"
-              alt="Crewpreneurs Logo"
-              width={160}
-              height={60}
-            />
-          </a>
+          > */}
+<Link href="/" className="flex items-center">
+  <Image
+    src="/logo.png"
+    alt="Crewpreneurs Logo"
+    width={160}
+    height={60}
+  />
+</Link>
+
         </div>
 
         <ul
